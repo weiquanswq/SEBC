@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # <center>Services Enablement Boot Camp 
 # <center> 
 
@@ -50,7 +50,4 @@ changes to your GitHub repo settings:
     * Leave the `invalid` Issue as is
     * Change `wontfix` to `incomplete`; set the label color to yellow (`#fbca04`).
     * Leave the `question` Issue as is
-=======
-# SEBC
-This repository is used for ClouderaServices Enablement Boot Camp.
->>>>>>> 4210b86ad42865db00a2d2f89d1874fbf5ce3e12
+
