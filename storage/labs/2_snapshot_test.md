@@ -14,7 +14,7 @@ hadoop fs -touchz abc.txt /precious
 Through Cloudera Manager 
 HDFS > file browser > /precious > enable snapshot
 
-<b>Created snapshots called ```sebc-hdfs-test``` and ```sebc-hdfs-test```</b>
+<b>Created snapshots called ```sebc-hdfs-test``` and ```sebc-hdfs-test-123```</b>
 
 ##Delete directory ```/precious```
 ```
@@ -39,5 +39,6 @@ Result :
 hadoop fs -cp /precious/.snapshot/sebc-hdfs-test-123/abc.txt /precious
 ```
 Can be done through Cloudera Manager as well.
+Cluster > HDFS > File Browser > select drop-down menu next to the full file path  > Restore Directory From Snapshot
 
 
