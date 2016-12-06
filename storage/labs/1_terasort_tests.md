@@ -6,6 +6,7 @@ sudo useradd weiquanswq
 sudo passwd weiquanswq
 ```
 ## Create home HDFS directory 
+Creating home directory as ```hdfs``` user and which change the ownership to ```weiquanswq``` user
 ```
 sudo -u hdfs hadoop fs -mkdir /user/weiquanswq
 sudo -u hdfs hadoop fs -chown weiquanswq:weiquanswq /user/weiquanswq 
@@ -14,6 +15,8 @@ sudo -u hdfs hadoop fs -chown weiquanswq:weiquanswq /user/weiquanswq
 ##Create a 10 GB file using ```teragen```
  - Set the number of mappers to four
  - Limit the block size to 32 MB
+ 
+The number of splits is depends on the number of mapper. In this case, it will contributes to 4 parts.
  ```
  time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -Dmapred.map.tasks=4 -D dfs.blocksize=32m 100000000 /user/weiquanswq/teragen-10GB 
  ```
@@ -79,6 +82,8 @@ Found 5 items
 ```
 
 ## Run the ```terasort``` command on the file generated
+Reading data from ```  /user/weiquanswq/teragen-10GB``` and output results at ```/user/weiquanswq/terasort-10GB``` 
+In this command, it will utilise both Map and Reduce.
 ```
 time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar terasort /user/weiquanswq/teragen-10GB /user/weiquanswq/terasort-10GB
 ```
