@@ -29,3 +29,8 @@ Valid starting     Expires            Service principal
         renew until 12/08/16 00:45:59
 [weiquanswq@clouderasedc-node00 ~]$
 ```
+
+*Valid starting*     Expires            Service principal
+12/08/16 00:45:59  12/09/16 00:45:59  krbtgt/EXAMPLE.COM@EXAMPLE.COM
+        *renew until* 12/08/16 00:45:59
+[weiquanswq@clouderasedc-node00 ~]$
